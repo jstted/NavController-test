@@ -60,9 +60,9 @@
 				C82B0D62293CE28F002CF602 /* SceneDelegate.swift */,
 				C82B0D64293CE28F002CF602 /* ViewController.swift */,
 				C82B0D66293CE28F002CF602 /* Main.storyboard */,
-				C82B0D69293CE291002CF602 /* Assets.xcassets */,
 				C82B0D6B293CE291002CF602 /* LaunchScreen.storyboard */,
 				C82B0D6E293CE291002CF602 /* Info.plist */,
+				C82B0D69293CE291002CF602 /* Assets.xcassets */,
 			);
 			path = "NavController test";
 			sourceTree = "<group>";

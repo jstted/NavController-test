@@ -8,12 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //MARK: - View Elements
+    let usernameTextField = UITextField()
+    let passwordTextField = UITextField()
+    let signInButton = UIButton()
+    
+    //MARK: - View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    //MARK: - Setup View Methods
+    
+    
+    
+    
 }
 
