@@ -19,7 +19,7 @@ class Data {
     
     //MARK: - Private keys
     
-    private let usernameKey = "UsernameKey"
-    private let passwordKey = "PasswordKey"
+    private let usernameKey = "Username"
+    private let passwordKey = "Password"
     
 }

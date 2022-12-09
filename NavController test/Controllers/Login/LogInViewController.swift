@@ -20,12 +20,12 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = .black
         view.backgroundColor = .white
         usernameAppearance()
         passwordAppearance()
         signInButtonAppearance()
         signUpButtonAppearance()
-        
         
     }
     
@@ -38,6 +38,7 @@ class LogInViewController: UIViewController {
         usernameTextField.borderStyle = .roundedRect
         usernameTextField.autocorrectionType = .no
         usernameTextField.spellCheckingType = .no
+        usernameTextField.autocapitalizationType = .none
     }
     
     func passwordAppearance() {
@@ -48,6 +49,9 @@ class LogInViewController: UIViewController {
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocorrectionType = .no
         passwordTextField.spellCheckingType = .no
+        passwordTextField.autocapitalizationType = .none
+        passwordTextField.keyboardType = .default
+        passwordTextField.textContentType = .oneTimeCode
     }
     
     func signInButtonAppearance() {
@@ -62,7 +66,7 @@ class LogInViewController: UIViewController {
         signInButton.frame = CGRect(x: 135, y: 490, width: 120, height: 40)
         
         //Background
-        signInButton.backgroundColor = .systemBlue
+        signInButton.backgroundColor = .black
         signInButton.layer.cornerRadius = .pi
 
     }
@@ -73,7 +77,7 @@ class LogInViewController: UIViewController {
         
         //Title
         signUpButton.setTitle("Sign up", for: .normal)
-        signUpButton.setTitleColor(.systemBlue, for: .normal)
+        signUpButton.setTitleColor(.black, for: .normal)
         
         //Position
         signUpButton.frame = CGRect(x: 135, y: 550, width: 120, height: 40)
@@ -87,12 +91,16 @@ class LogInViewController: UIViewController {
     
     //MARK: - Action methods
     
-    //Sign up action
+    //Sign up Action
     @objc private func signUpAction(sender: Any) {
         let signUpViewController = SignUpViewController()
         navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
+    //Login Action
+    @objc private func logInAction(sender: Any) {
+        
+    }
     
     
     

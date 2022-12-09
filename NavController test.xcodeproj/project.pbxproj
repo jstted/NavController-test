@@ -14,6 +14,8 @@
 		C82B0D6D293CE291002CF602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82B0D6B293CE291002CF602 /* LaunchScreen.storyboard */; };
 		C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */; };
 		C82B0DA42940D477002CF602 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0DA32940D477002CF602 /* UserData.swift */; };
+		C85244322943ABD3007EC09B /* DoneSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85244312943ABD3007EC09B /* DoneSignUpViewController.swift */; };
+		C85244352943B696007EC09B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85244342943B696007EC09B /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C82B0D6E293CE291002CF602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C82B0DA32940D477002CF602 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C85244312943ABD3007EC09B /* DoneSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSignUpViewController.swift; sourceTree = "<group>"; };
+		C85244342943B696007EC09B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +92,9 @@
 		C852442D294397F7007EC09B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */,
-				C82B0D64293CE28F002CF602 /* LogInViewController.swift */,
+				C85244332943B677007EC09B /* Home */,
+				C85244302943A133007EC09B /* Login */,
+				C852442F2943A116007EC09B /* Sign up */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +105,31 @@
 				C82B0DA32940D477002CF602 /* UserData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C852442F2943A116007EC09B /* Sign up */ = {
+			isa = PBXGroup;
+			children = (
+				C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */,
+				C85244312943ABD3007EC09B /* DoneSignUpViewController.swift */,
+			);
+			path = "Sign up";
+			sourceTree = "<group>";
+		};
+		C85244302943A133007EC09B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C82B0D64293CE28F002CF602 /* LogInViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C85244332943B677007EC09B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C85244342943B696007EC09B /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +204,10 @@
 			files = (
 				C82B0D65293CE28F002CF602 /* LogInViewController.swift in Sources */,
 				C82B0D61293CE28F002CF602 /* AppDelegate.swift in Sources */,
+				C85244322943ABD3007EC09B /* DoneSignUpViewController.swift in Sources */,
 				C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */,
 				C82B0DA42940D477002CF602 /* UserData.swift in Sources */,
+				C85244352943B696007EC09B /* HomeViewController.swift in Sources */,
 				C82B0D63293CE28F002CF602 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

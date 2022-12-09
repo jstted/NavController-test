@@ -9,6 +9,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    //MARK: - View Elements
+    
     let data = Data()
     
     var usernameTextField = UITextField()
@@ -16,13 +18,18 @@ class SignUpViewController: UIViewController {
     var passwordRepeatTextField = UITextField()
     var registerButton = UIButton()
     
+    //MARK: - View did load
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGreen
+        self.navigationController?.navigationBar.tintColor = .black
+        view.backgroundColor = .white
         usernameAppearance()
         passwordAppearance()
         passwordRepeatAppearance()
         registerButtonAppearance()
+        
+
     }
     
     //MARK: - Setup View Methods
@@ -34,6 +41,7 @@ class SignUpViewController: UIViewController {
         usernameTextField.borderStyle = .roundedRect
         usernameTextField.autocorrectionType = .no
         usernameTextField.spellCheckingType = .no
+        usernameTextField.autocapitalizationType = .none
     }
     
     func passwordAppearance() {
@@ -44,6 +52,8 @@ class SignUpViewController: UIViewController {
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocorrectionType = .no
         passwordTextField.spellCheckingType = .no
+        passwordTextField.autocapitalizationType = .none
+
     }
     
     func passwordRepeatAppearance() {
@@ -54,6 +64,7 @@ class SignUpViewController: UIViewController {
         passwordRepeatTextField.borderStyle = .roundedRect
         passwordRepeatTextField.autocorrectionType = .no
         passwordRepeatTextField.spellCheckingType = .no
+        passwordRepeatTextField.autocapitalizationType = .none
         
     }
     
@@ -69,7 +80,7 @@ class SignUpViewController: UIViewController {
         registerButton.frame = CGRect(x: 135, y: 590, width: 120, height: 40)
         
         //Background
-        registerButton.backgroundColor = .systemBlue
+        registerButton.backgroundColor = .black
         registerButton.layer.cornerRadius = .pi
         
         registerButton.addTarget(self, action: #selector(registerButtonAction), for: .touchUpInside)
@@ -88,6 +99,9 @@ class SignUpViewController: UIViewController {
         data.setUpPassword(passwordTextField.text!)
         
         print(usernameTextField.text!, passwordTextField.text!)
+        let doneSignUpViewController = DoneSignUpViewController()
+        navigationController?.pushViewController(doneSignUpViewController, animated: true)
+        
     }
 
 }
