@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LogInViewController: UIViewController {
     
     //MARK: - View Elements
     

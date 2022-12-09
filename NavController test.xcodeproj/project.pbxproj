@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C82B0D61293CE28F002CF602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D60293CE28F002CF602 /* AppDelegate.swift */; };
 		C82B0D63293CE28F002CF602 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D62293CE28F002CF602 /* SceneDelegate.swift */; };
-		C82B0D65293CE28F002CF602 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D64293CE28F002CF602 /* LoginViewController.swift */; };
+		C82B0D65293CE28F002CF602 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D64293CE28F002CF602 /* LogInViewController.swift */; };
 		C82B0D6A293CE291002CF602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82B0D69293CE291002CF602 /* Assets.xcassets */; };
 		C82B0D6D293CE291002CF602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82B0D6B293CE291002CF602 /* LaunchScreen.storyboard */; };
 		C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */; };
@@ -20,7 +20,7 @@
 		C82B0D5D293CE28F002CF602 /* NavController test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavController test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82B0D60293CE28F002CF602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C82B0D62293CE28F002CF602 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C82B0D64293CE28F002CF602 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C82B0D64293CE28F002CF602 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C82B0D69293CE291002CF602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82B0D6C293CE291002CF602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82B0D6E293CE291002CF602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				C82B0D5F293CE28F002CF602 /* NavController test */,
-				C82B0DA12940BB22002CF602 /* Resourses */,
 				C82B0D5E293CE28F002CF602 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,48 +58,48 @@
 		C82B0D5F293CE28F002CF602 /* NavController test */ = {
 			isa = PBXGroup;
 			children = (
-				C82B0DA22940D431002CF602 /* Method */,
-				C82B0D75293F9642002CF602 /* Controllers */,
-				C82B0D74293F9633002CF602 /* Delegate */,
+				C852442E2943980C007EC09B /* Model */,
+				C852442D294397F7007EC09B /* Controllers */,
+				C852442C294397DF007EC09B /* Delegate */,
+				C852442B294397AB007EC09B /* Resourses */,
 			);
 			path = "NavController test";
 			sourceTree = "<group>";
 		};
-		C82B0D74293F9633002CF602 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				C82B0D60293CE28F002CF602 /* AppDelegate.swift */,
-				C82B0D62293CE28F002CF602 /* SceneDelegate.swift */,
-			);
-			name = Delegate;
-			sourceTree = "<group>";
-		};
-		C82B0D75293F9642002CF602 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C82B0D64293CE28F002CF602 /* LoginViewController.swift */,
-				C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		C82B0DA12940BB22002CF602 /* Resourses */ = {
+		C852442B294397AB007EC09B /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
 				C82B0D6E293CE291002CF602 /* Info.plist */,
 				C82B0D69293CE291002CF602 /* Assets.xcassets */,
 				C82B0D6B293CE291002CF602 /* LaunchScreen.storyboard */,
 			);
-			name = Resourses;
-			path = "NavController test";
+			path = Resourses;
 			sourceTree = "<group>";
 		};
-		C82B0DA22940D431002CF602 /* Method */ = {
+		C852442C294397DF007EC09B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C82B0D60293CE28F002CF602 /* AppDelegate.swift */,
+				C82B0D62293CE28F002CF602 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		C852442D294397F7007EC09B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C82B0D79293FA2FD002CF602 /* SignUpViewController.swift */,
+				C82B0D64293CE28F002CF602 /* LogInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C852442E2943980C007EC09B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C82B0DA32940D477002CF602 /* UserData.swift */,
 			);
-			name = Method;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82B0D65293CE28F002CF602 /* LoginViewController.swift in Sources */,
+				C82B0D65293CE28F002CF602 /* LogInViewController.swift in Sources */,
 				C82B0D61293CE28F002CF602 /* AppDelegate.swift in Sources */,
 				C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */,
 				C82B0DA42940D477002CF602 /* UserData.swift in Sources */,
@@ -318,11 +317,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YU35F66VY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NavController test/Info.plist";
+				INFOPLIST_FILE = "NavController test/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,11 +348,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YU35F66VY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NavController test/Info.plist";
+				INFOPLIST_FILE = "NavController test/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
