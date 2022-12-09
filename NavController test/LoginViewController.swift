@@ -13,8 +13,8 @@ class LoginViewController: UIViewController {
     
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()
-    let signInButton = UIButton()
-    let signUpButton = UIButton()
+    var signInButton = UIButton()
+    var signUpButton = UIButton()
     
     //MARK: - View did load
     
@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     func signInButtonAppearance() {
+        signInButton = UIButton(type: .system)
         view.addSubview(signInButton)
         
         //Title
@@ -58,7 +59,7 @@ class LoginViewController: UIViewController {
         signInButton.setTitleColor(.white, for: .normal)
         
         //Position
-        signInButton.frame = CGRect(x: 150, y: 490, width: 120, height: 40)
+        signInButton.frame = CGRect(x: 135, y: 490, width: 120, height: 40)
         
         //Background
         signInButton.backgroundColor = .systemBlue
@@ -67,6 +68,7 @@ class LoginViewController: UIViewController {
     }
     
     func signUpButtonAppearance() {
+        signUpButton = UIButton(type: .system)
         view.addSubview(signUpButton)
         
         //Title
@@ -74,20 +76,21 @@ class LoginViewController: UIViewController {
         signUpButton.setTitleColor(.systemBlue, for: .normal)
         
         //Position
-        signUpButton.frame = CGRect(x: 150, y: 550, width: 120, height: 40)
+        signUpButton.frame = CGRect(x: 135, y: 550, width: 120, height: 40)
         
         //Background
         signUpButton.layer.cornerRadius = .pi
 
         //Target
-        signUpButton.addTarget(self, action: #selector(signUpaction), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpAction), for: .touchUpInside)
     }
     
     //MARK: - Action methods
     
     //Sign up action
-    @objc private func signUpaction() {
-        
+    @objc private func signUpAction(sender: Any) {
+        let signUpViewController = SignUpViewController()
+        navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
     
