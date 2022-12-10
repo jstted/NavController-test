@@ -11,7 +11,7 @@ class SignUpViewController: UIViewController {
 
     //MARK: - View Elements
     
-    let data = Data()
+    let data = Authorization()
     
     var usernameTextField = UITextField()
     var passwordTextField = UITextField()

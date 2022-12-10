@@ -15,6 +15,7 @@ class LogInViewController: UIViewController {
     let passwordTextField = UITextField()
     var signInButton = UIButton()
     var signUpButton = UIButton()
+    let data = Authorization()
     
     //MARK: - View did load
     
@@ -69,6 +70,8 @@ class LogInViewController: UIViewController {
         signInButton.backgroundColor = .black
         signInButton.layer.cornerRadius = .pi
 
+        //Target
+        signInButton.addTarget(self, action: #selector(logInAction), for: .touchUpInside)
     }
     
     func signUpButtonAppearance() {
@@ -99,6 +102,14 @@ class LogInViewController: UIViewController {
     
     //Login Action
     @objc private func logInAction(sender: Any) {
+        guard (usernameTextField.text?.isEmpty) != nil else { return }
+        guard (passwordTextField.text?.isEmpty) != nil else { return }
+        
+        guard data.checkUsername(usernameTextField.text) else { return print("pizda1") }
+        guard data.checkPassword(passwordTextField.text) else { return print("pizda2") }
+        
+        let homeViewController = HomeViewController()
+        navigationController?.pushViewController(homeViewController, animated: true)
         
     }
     
