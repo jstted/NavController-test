@@ -9,31 +9,33 @@ import Foundation
 
 class Authorization {
     var userDefaults = UserDefaults.standard
+    let constants = Constants()
     
     //MARK: - Sign up methods
     
     func setUpUsername(_ username: String) {
-        userDefaults.set(username, forKey: usernameKey)
+        userDefaults.set(username, forKey: Constants.UserDefaultsKeys.usernameKey)
     }
     func setUpPassword(_ password: String) {
-        userDefaults.set(password, forKey: passwordKey)
+        userDefaults.set(password, forKey: Constants.UserDefaultsKeys.passwordKey)
     }
     
     //MARK: - Login methods
     
     func checkUsername(_ username: String?) -> Bool {
-        guard userDefaults.string(forKey: usernameKey) == username else { return false }
+        guard userDefaults.string(forKey: Constants.UserDefaultsKeys.usernameKey) == username else { return false }
         return true
     }
     
     func checkPassword(_ password: String?) -> Bool {
-        guard userDefaults.string(forKey: passwordKey) == password else { return false }
+        guard userDefaults.string(forKey: Constants.UserDefaultsKeys.passwordKey) == password else { return false }
         return true
     }
     
-    //MARK: - Private keys
     
-    private let usernameKey = "Username"
-    private let passwordKey = "Password"
+    func authenticatedUser() {
+        
+    }
+    
     
 }

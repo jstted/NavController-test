@@ -108,6 +108,9 @@ class LogInViewController: UIViewController {
         guard data.checkUsername(usernameTextField.text) else { return print("pizda1") }
         guard data.checkPassword(passwordTextField.text) else { return print("pizda2") }
         
+        UserDefaults.standard.set(true, forKey: Constants.UserDefaultsKeys.isLogin)
+        
+        
         let homeViewController = HomeViewController()
         navigationController?.pushViewController(homeViewController, animated: true)
         
