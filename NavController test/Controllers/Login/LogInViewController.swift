@@ -105,8 +105,8 @@ class LogInViewController: UIViewController {
         guard (usernameTextField.text?.isEmpty) != nil else { return }
         guard (passwordTextField.text?.isEmpty) != nil else { return }
         
-        guard data.checkUsername(usernameTextField.text) else { return print("pizda1") }
-        guard data.checkPassword(passwordTextField.text) else { return print("pizda2") }
+        guard data.checkUsername(usernameTextField.text) else { return print("Wrong username") }
+        guard data.checkPassword(passwordTextField.text) else { return print("Wrong password") }
         
         UserDefaults.standard.set(true, forKey: Constants.UserDefaultsKeys.isLogin)
         
