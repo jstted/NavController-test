@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
-    func switcher() {
+    private func switcher() {
         let status = UserDefaults.standard.bool(forKey: Constants.UserDefaultsKeys.isLogin)
 
         

@@ -9,10 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var storage = Storage.shared.reminders
+    
+    //MARK: - View Items
+    
     var tableView = UITableView()
 
     var safeArea: UILayoutGuide!
-    let numbers = ["one","two", "three"]
     
     //MARK: - View Controllers cycles
     
@@ -26,7 +29,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.reloadData()
     }
     
     //MARK: - Table View setup
@@ -34,19 +37,18 @@ class HomeViewController: UIViewController {
     func setupTableView() {
         
         self.tableView.dataSource = self
-        
-        view.addSubview(tableView)
+        self.tableView.delegate = self
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
 
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
+        
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: Constants.Cells.MainCell)
         
     }
@@ -55,20 +57,31 @@ class HomeViewController: UIViewController {
 
 }
 
-//MARK: - UITableViewDataSourse
+//MARK: - UITableViewDataSourse, UITableViewDelegate
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        guard storage.isEmpty else {return storage.count}
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.MainCell, for: indexPath) as! HomeTableViewCell
         cell.reminderTextField.placeholder = "Add reminder"
-        
+        guard storage.isEmpty else {
+            cell.reminderTextField.text = storage[indexPath.row].text
+            return cell
+            }
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
 
 }

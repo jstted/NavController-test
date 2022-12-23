@@ -1,5 +1,5 @@
 //
-//  UserData.swift
+//  Authorization.swift
 //  NavController test
 //
 //  Created by Mikhail Tedeev on 07.12.2022.
@@ -9,7 +9,6 @@ import Foundation
 
 class Authorization {
     var userDefaults = UserDefaults.standard
-    let constants = Constants()
     
     //MARK: - Sign up methods
     
