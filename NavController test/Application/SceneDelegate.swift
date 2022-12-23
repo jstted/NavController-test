@@ -30,10 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(status)
         
         if (status == true) {
-            
-            let homeViewContrloller = HomeViewController()
-            
-            window?.rootViewController = homeViewContrloller
+                        
+            window?.rootViewController = HomeViewController()
             window?.makeKeyAndVisible()
             
         } else {

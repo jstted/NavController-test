@@ -13,4 +13,8 @@ struct Constants {
         static let passwordKey = "Password"
         static let isLogin = "isLogin"
     }
+    
+    struct Cells {
+        static let MainCell = "mainCell"
+    }
 }

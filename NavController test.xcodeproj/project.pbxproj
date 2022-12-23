@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80DC0482955DEAD00567CAC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80DC0472955DEAD00567CAC /* HomeTableViewCell.swift */; };
 		C82B0D61293CE28F002CF602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D60293CE28F002CF602 /* AppDelegate.swift */; };
 		C82B0D63293CE28F002CF602 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D62293CE28F002CF602 /* SceneDelegate.swift */; };
 		C82B0D65293CE28F002CF602 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B0D64293CE28F002CF602 /* LogInViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C80DC0472955DEAD00567CAC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		C82B0D5D293CE28F002CF602 /* NavController test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavController test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82B0D60293CE28F002CF602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C82B0D62293CE28F002CF602 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C80DC0462955DE7000567CAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C80DC0472955DEAD00567CAC /* HomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C82B0D54293CE28F002CF602 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		C82B0D5F293CE28F002CF602 /* NavController test */ = {
 			isa = PBXGroup;
 			children = (
+				C80DC0462955DE7000567CAC /* View */,
 				C852442E2943980C007EC09B /* Core */,
 				C852442D294397F7007EC09B /* Controllers */,
 				C852442C294397DF007EC09B /* Application */,
@@ -211,6 +222,7 @@
 				C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */,
 				C82B0DA42940D477002CF602 /* UserData.swift in Sources */,
 				C85244352943B696007EC09B /* HomeViewController.swift in Sources */,
+				C80DC0482955DEAD00567CAC /* HomeTableViewCell.swift in Sources */,
 				C82B0D63293CE28F002CF602 /* SceneDelegate.swift in Sources */,
 				C852443729476CD0007EC09B /* Constants.swift in Sources */,
 			);
