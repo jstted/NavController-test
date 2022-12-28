@@ -30,8 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(status)
         
         if (status == true) {
-                        
-            window?.rootViewController = HomeViewController()
+            let homeViewController = HomeViewController()
+            navigationController = UINavigationController(rootViewController: homeViewController)
+            window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
             
         } else {

@@ -12,7 +12,7 @@ class HomeTableViewCell: UITableViewCell {
     //MARK: - View Items
     
     var reminderTextField = UITextField()
-    var storage = Storage.shared.reminders
+    
     
     
     //MARK: - Override Init
@@ -42,16 +42,5 @@ class HomeTableViewCell: UITableViewCell {
 }
 
 extension HomeTableViewCell: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        storage.insert(.init(text: textField.text, date: .now), at: 0)
-        print("\(textField.text!)")
-        textField.endEditing(true)
-        
-        return true
-    }
-    
-    
-    
     
 }

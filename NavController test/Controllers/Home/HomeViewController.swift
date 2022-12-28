@@ -8,13 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    var storage = Storage.shared.reminders
+    var storage: [ReminderStruct] = [ReminderStruct(text: "test og", date: .now)]
     
     //MARK: - View Items
     
     var tableView = UITableView()
-
     var safeArea: UILayoutGuide!
     
     //MARK: - View Controllers cycles
@@ -25,6 +23,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemRed
         safeArea = view.layoutMarginsGuide
         setupTableView()
+        setupAddButton()
     }
     
     override func viewDidLoad() {
@@ -43,7 +42,7 @@ class HomeViewController: UIViewController {
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
@@ -52,8 +51,20 @@ class HomeViewController: UIViewController {
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: Constants.Cells.MainCell)
         
     }
+    
+    func setupAddButton() {
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonAction))
+        navigationItem.rightBarButtonItem = addButton
+        addButton.tintColor = .black
+        
+    }
 
-
+    //MARK: - Setup actions
+    
+    @objc func addButtonAction() {
+        
+    }
 
 }
 
@@ -62,17 +73,13 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard storage.isEmpty else {return storage.count}
-        return 1
+        return storage.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.MainCell, for: indexPath) as! HomeTableViewCell
         cell.reminderTextField.placeholder = "Add reminder"
-        guard storage.isEmpty else {
-            cell.reminderTextField.text = storage[indexPath.row].text
-            return cell
-            }
+        cell.reminderTextField.text = storage[indexPath.row].text
         return cell
     }
     
