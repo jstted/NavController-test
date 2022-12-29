@@ -30,10 +30,12 @@ class HomeTableViewCell: UITableViewCell {
     func setupReminderTextField() {
         contentView.addSubview(reminderTextField)
         reminderTextField.delegate = self
-        reminderTextField.translatesAutoresizingMaskIntoConstraints = false
         reminderTextField.returnKeyType = .done
+        
+        //Constraints
+        reminderTextField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            reminderTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            reminderTextField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             reminderTextField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             reminderTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),
             reminderTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),

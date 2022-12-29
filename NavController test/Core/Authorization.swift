@@ -31,10 +31,4 @@ class Authorization {
         return true
     }
     
-    
-    func authenticatedUser() {
-        
-    }
-    
-    
 }

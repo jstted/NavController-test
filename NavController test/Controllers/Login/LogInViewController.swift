@@ -32,7 +32,7 @@ class LogInViewController: UIViewController {
     
     //MARK: - Setup View Methods
     
-    func usernameAppearance() {
+    private func usernameAppearance() {
         view.addSubview(usernameTextField)
         usernameTextField.frame = CGRect(x: 85, y: 290, width: 220, height: 40)
         usernameTextField.placeholder = "Username"
@@ -42,7 +42,7 @@ class LogInViewController: UIViewController {
         usernameTextField.autocapitalizationType = .none
     }
     
-    func passwordAppearance() {
+    private func passwordAppearance() {
         view.addSubview(passwordTextField)
         passwordTextField.frame = CGRect(x: 85, y: 390, width: 220, height: 40)
         passwordTextField.placeholder = "Password"
@@ -55,7 +55,7 @@ class LogInViewController: UIViewController {
         passwordTextField.textContentType = .oneTimeCode
     }
     
-    func signInButtonAppearance() {
+    private func signInButtonAppearance() {
         signInButton = UIButton(type: .system)
         view.addSubview(signInButton)
         
@@ -74,7 +74,7 @@ class LogInViewController: UIViewController {
         signInButton.addTarget(self, action: #selector(logInAction), for: .touchUpInside)
     }
     
-    func signUpButtonAppearance() {
+    private func signUpButtonAppearance() {
         signUpButton = UIButton(type: .system)
         view.addSubview(signUpButton)
         

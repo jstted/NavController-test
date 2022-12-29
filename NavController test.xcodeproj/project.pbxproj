@@ -20,6 +20,7 @@
 		C85244322943ABD3007EC09B /* DoneSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85244312943ABD3007EC09B /* DoneSignUpViewController.swift */; };
 		C85244352943B696007EC09B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85244342943B696007EC09B /* HomeViewController.swift */; };
 		C852443729476CD0007EC09B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852443629476CD0007EC09B /* Constants.swift */; };
+		C8DDF3CA295DC917003627C5 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDF3C9295DC917003627C5 /* AddReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C85244312943ABD3007EC09B /* DoneSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSignUpViewController.swift; sourceTree = "<group>"; };
 		C85244342943B696007EC09B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C852443629476CD0007EC09B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8DDF3C9295DC917003627C5 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				C85244342943B696007EC09B /* HomeViewController.swift */,
+				C8DDF3C9295DC917003627C5 /* AddReminderViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				C82B0D61293CE28F002CF602 /* AppDelegate.swift in Sources */,
 				C85244322943ABD3007EC09B /* DoneSignUpViewController.swift in Sources */,
 				C82B0D7A293FA2FD002CF602 /* SignUpViewController.swift in Sources */,
+				C8DDF3CA295DC917003627C5 /* AddReminderViewController.swift in Sources */,
 				C82B0DA42940D477002CF602 /* Authorization.swift in Sources */,
 				C85244352943B696007EC09B /* HomeViewController.swift in Sources */,
 				C80DC0482955DEAD00567CAC /* HomeTableViewCell.swift in Sources */,
@@ -382,6 +386,7 @@
 				DEVELOPMENT_TEAM = 3YU35F66VY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NavController test/Resourses/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Reminders;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -413,6 +418,7 @@
 				DEVELOPMENT_TEAM = 3YU35F66VY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NavController test/Resourses/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Reminders;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

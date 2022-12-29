@@ -28,14 +28,14 @@ class DoneSignUpViewController: UIViewController {
     
     //MARK: - Setup View Methods
     
-    func navigationBarAppearance() {
+    private func navigationBarAppearance() {
         title = "Congratulations!"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.hidesBackButton = true
 
     }
     
-    func congratsLabelAppearance() {
+    private func congratsLabelAppearance() {
         view.addSubview(congratsLabel)
         //Text
         congratsLabel.text = "Registration is complete!"
@@ -45,7 +45,7 @@ class DoneSignUpViewController: UIViewController {
         
     }
     
-    func doneButtonAppearance() {
+    private func doneButtonAppearance() {
         doneButton = UIButton(type: .system)
         view.addSubview(doneButton)
         
@@ -65,7 +65,7 @@ class DoneSignUpViewController: UIViewController {
 
     //MARK: - View Actions
     
-    @objc func doneButtonAction() {
+    @objc private func doneButtonAction() {
         self.navigationController?.popToRootViewController(animated: true)
     }
 

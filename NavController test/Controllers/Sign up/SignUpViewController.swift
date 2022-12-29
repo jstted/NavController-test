@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Setup View Methods
     
-    func usernameAppearance() {
+    private func usernameAppearance() {
         view.addSubview(usernameTextField)
         usernameTextField.frame = CGRect(x: 85, y: 290, width: 220, height: 40)
         usernameTextField.placeholder = "Username"
@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
         usernameTextField.autocapitalizationType = .none
     }
     
-    func passwordAppearance() {
+    private func passwordAppearance() {
         view.addSubview(passwordTextField)
         passwordTextField.frame = CGRect(x: 85, y: 390, width: 220, height: 40)
         passwordTextField.placeholder = "Password"
@@ -56,7 +56,7 @@ class SignUpViewController: UIViewController {
 
     }
     
-    func passwordRepeatAppearance() {
+    private func passwordRepeatAppearance() {
         view.addSubview(passwordRepeatTextField)
         passwordRepeatTextField.frame = CGRect(x: 85, y: 490, width: 220, height: 40)
         passwordRepeatTextField.placeholder = "Repeat password"
@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
         
     }
     
-    func registerButtonAppearance() {
+    private func registerButtonAppearance() {
         registerButton = UIButton(type: .system)
         view.addSubview(registerButton)
         
@@ -89,7 +89,7 @@ class SignUpViewController: UIViewController {
     
     //MARK: - View Actions
     
-    @objc func registerButtonAction() {
+    @objc private func registerButtonAction() {
         guard (usernameTextField.text?.isEmpty) != nil else { return }
         guard (passwordTextField.text?.isEmpty) != nil else { return }
         guard (passwordRepeatTextField.text?.isEmpty) != nil else { return }

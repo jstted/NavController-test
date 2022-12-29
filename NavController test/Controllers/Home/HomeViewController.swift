@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     var tableView = UITableView()
     var safeArea: UILayoutGuide!
+    var addButton = UIBarButtonItem()
     
     //MARK: - View Controllers cycles
     
@@ -32,9 +33,9 @@ class HomeViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
-    //MARK: - Table View setup
-    
-    func setupTableView() {
+    //MARK: - Setup Views
+
+    private func setupTableView() {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -44,7 +45,7 @@ class HomeViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
         ])
@@ -52,10 +53,10 @@ class HomeViewController: UIViewController {
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: Constants.Cells.MainCell)
         
     }
-    
-    func setupAddButton() {
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonAction))
+    private func setupAddButton() {
+        
+        addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonAction))
         navigationItem.rightBarButtonItem = addButton
         addButton.tintColor = .black
         
@@ -64,14 +65,14 @@ class HomeViewController: UIViewController {
     //MARK: - Setup actions
     
     @objc func addButtonAction() {
-        
+        present(AddReminderViewController(), animated: true)
     }
 
 }
 
 //MARK: - UITableViewDataSourse, UITableViewDelegate
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     //Table view extentions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +81,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UIText
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.MainCell, for: indexPath) as! HomeTableViewCell
-        cell.reminderTextField.placeholder = "Add reminder"
+        cell.reminderTextField.placeholder = "Write something"
         cell.reminderTextField.text = storage[indexPath.row].text
         return cell
     }
