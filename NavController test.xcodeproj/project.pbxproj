@@ -54,7 +54,7 @@
 		C80DC0462955DE7000567CAC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C80DC0472955DEAD00567CAC /* HomeTableViewCell.swift */,
+				C8DDF3C8295DAA58003627C5 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +148,14 @@
 			isa = PBXGroup;
 			children = (
 				C85244342943B696007EC09B /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C8DDF3C8295DAA58003627C5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C80DC0472955DEAD00567CAC /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

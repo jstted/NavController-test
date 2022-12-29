@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         navigationItem.hidesBackButton = true
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .white
         safeArea = view.layoutMarginsGuide
         setupTableView()
         setupAddButton()
@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        hideKeyboardWhenTappedAround()
     }
     
     //MARK: - Table View setup
@@ -70,8 +71,9 @@ class HomeViewController: UIViewController {
 
 //MARK: - UITableViewDataSourse, UITableViewDelegate
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
+    //Table view extentions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return storage.count
     }
@@ -91,4 +93,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return false
     }
 
+    //Hide keyboard extentions
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
 }

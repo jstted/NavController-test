@@ -9,6 +9,8 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
+    var homeVC = HomeViewController()
+    
     //MARK: - View Items
     
     var reminderTextField = UITextField()
